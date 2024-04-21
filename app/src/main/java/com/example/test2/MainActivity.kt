@@ -1,5 +1,6 @@
 package com.example.test2
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -39,6 +40,11 @@ class MainActivity : ComponentActivity() {
         }
 
         updateDashboard()
+
+        binding.addBtn.setOnClickListener {
+            val intent = Intent(this, AddTransactionActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun updateDashboard(){
