@@ -39,5 +39,10 @@ class TransactionAdapter(private var transactions: List<Transaction>) :
     override fun getItemCount(): Int {
         return transactions.size
     }
+
+    fun setData(transactions: List<Transaction>){
+        this.transactions = transactions
+        notifyDataSetChanged()
+    }
 }
 

@@ -6,7 +6,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.widget.addTextChangedListener
+import androidx.room.Room
 import com.example.test2.databinding.ActivityAddTransactionBinding
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 
 class AddTransactionActivity : AppCompatActivity() {
 
@@ -40,17 +43,30 @@ class AddTransactionActivity : AppCompatActivity() {
         binding.addTransactionBtn.setOnClickListener {
             val label = binding.labelInput.text.toString()
             val amount = binding.amountInput.text.toString().toDoubleOrNull()
+            val description = binding.descriptionInput.text.toString()
 
             if(label.isEmpty())
                 binding.labelLayout.error="Please enter a valid label"
 
-            if(amount == null)
+            else if(amount == null)
                 binding.amountLayout.error="Please enter a valid amount"
+            else {
+                val transaction = Transaction(0, label, amount, description)
+                insert(transaction)
+            }
         }
 
         binding.closeBtn.setOnClickListener{
            finish()
         }
     }
+    private fun insert(transaction: Transaction){
+        val db = Room.databaseBuilder(this, AppDatabase::class.java,"transactions").build()
 
+
+        GlobalScope.launch{
+            db.transactionDao().insertAll(transaction)
+            finish()
+        }
+    }
 }
