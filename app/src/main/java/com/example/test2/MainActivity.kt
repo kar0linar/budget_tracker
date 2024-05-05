@@ -4,6 +4,8 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.activity.ComponentActivity
+import androidx.core.app.NotificationCompat
+import androidx.core.app.NotificationManagerCompat
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -25,6 +27,7 @@ class MainActivity : ComponentActivity() {
     private lateinit var linearLayoutManager: LinearLayoutManager
     private lateinit var binding: ActivityMainBinding
     private lateinit var db : AppDatabase
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -86,9 +89,9 @@ class MainActivity : ComponentActivity() {
         val budgetAmount = transactions.filter{it.amount>0}.map{it.amount}.sum()
         val expenseAmount = totalAmount - budgetAmount
 
-        binding.balance.text = "$ %.2f".format(totalAmount)
-        binding.budget.text = "$ %.2f".format(budgetAmount)
-        binding.expense.text = "$ %.2f".format(expenseAmount)
+        binding.balance.text = "%.2f".format(totalAmount) + " zŁ"
+        binding.budget.text = "%.2f".format(budgetAmount) + " zŁ"
+        binding.expense.text = "%.2f".format(expenseAmount) + " zŁ"
 
     }
 
@@ -106,8 +109,8 @@ class MainActivity : ComponentActivity() {
     }
     private fun showSnackbar() {
         val view = findViewById<View>(R.id.coordinator)
-        val snackbar = Snackbar.make(view, "Transaction deleted!", Snackbar.LENGTH_LONG)
-        snackbar.setAction("undo"){
+        val snackbar = Snackbar.make(view, "transakcja usunięta!", Snackbar.LENGTH_LONG)
+        snackbar.setAction("przywróć"){
             undoDelete()
         }
             .setActionTextColor(ContextCompat.getColor(this, R.color.red))
@@ -127,6 +130,8 @@ class MainActivity : ComponentActivity() {
             }
         }
     }
+
+
     override fun onResume() {
         super.onResume()
         fetchAll()

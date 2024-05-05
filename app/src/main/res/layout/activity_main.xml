@@ -20,20 +20,26 @@
             android:orientation="vertical"
             android:layout_marginStart="10dp"
             android:layout_marginTop="18dp">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Total Balance"
+                android:text="całkowity bilans:"
                 android:textAllCaps="true"
+                android:textSize="20sp"
                 android:textStyle="bold"
-                android:textSize="20sp"/>
+                android:layout_gravity="center"
+                android:gravity="center" />
+
             <TextView
                 android:id="@+id/balance"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="$300"
                 android:textSize="32sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                android:textColor="@color/colorAccent"
+                android:layout_gravity="center"
+                android:gravity="center"/>
         </LinearLayout>
 
         <com.google.android.material.card.MaterialCardView
@@ -63,14 +69,14 @@
                         android:id="@+id/budget"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="$400"
+
                         android:textStyle="bold"
                         android:textSize="32sp"
                         android:textColor="@color/green"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Budget"
+                        android:text="Budżet"
                         android:textSize="17sp"
                         android:textAllCaps="true"/>
                 </LinearLayout>
@@ -84,14 +90,13 @@
                         android:id="@+id/expense"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="$400"
                         android:textStyle="bold"
                         android:textSize="32sp"
                         android:textColor="@color/red"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Expense"
+                        android:text="wydatki"
                         android:textSize="17sp"
                         android:textAllCaps="true"/>
                 </LinearLayout>
@@ -102,7 +107,7 @@
             android:id="@+id/recyclerview_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Transactions"
+            android:text="transakcje:"
             android:textStyle="bold"
             android:textSize="17sp"
             android:textAllCaps="true"

@@ -69,10 +69,10 @@ class DetailedActivity : AppCompatActivity() {
             val description = binding.descriptionInput.text.toString()
 
             if(label.isEmpty())
-                binding.labelLayout.error="Please enter a valid label"
+                binding.labelLayout.error="wpisz poprawną wartość"
 
             else if(amount == null)
-                binding.amountLayout.error="Please enter a valid amount"
+                binding.amountLayout.error="wpisz poprawną wartość"
             else {
                 val transaction = Transaction(transaction.id, label, amount, description)
                 update(transaction)
