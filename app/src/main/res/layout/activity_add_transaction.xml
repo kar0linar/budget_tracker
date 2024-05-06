@@ -35,7 +35,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
             android:layout_marginEnd="12dp"
-            android:hint="tytuł"
+            android:hint="@string/title"
             app:errorEnabled="true">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -55,7 +55,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
             android:layout_marginEnd="12dp"
-            android:hint="kwota"
+            android:hint="@string/amount"
             app:errorEnabled="true">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -75,7 +75,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
             android:layout_marginEnd="12dp"
-            android:hint="opis"
+            android:hint="@string/description"
             app:errorEnabled="true">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -95,7 +95,7 @@
             android:layout_marginEnd="12dp"
             android:background="@color/colorAccent"
             android:padding="12dp"
-            android:text="dodaj transakcję"
+            android:text="@string/add_transaction"
             android:textColor="@color/white" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

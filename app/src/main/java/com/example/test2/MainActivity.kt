@@ -109,8 +109,9 @@ class MainActivity : ComponentActivity() {
     }
     private fun showSnackbar() {
         val view = findViewById<View>(R.id.coordinator)
-        val snackbar = Snackbar.make(view, "transakcja usunięta!", Snackbar.LENGTH_LONG)
-        snackbar.setAction("przywróć"){
+        val snackbar = Snackbar.make(view,
+            getString(R.string.transaction_deleted), Snackbar.LENGTH_LONG)
+        snackbar.setAction(getString(R.string.undo)){
             undoDelete()
         }
             .setActionTextColor(ContextCompat.getColor(this, R.color.red))

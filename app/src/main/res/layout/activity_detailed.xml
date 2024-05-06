@@ -33,7 +33,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
             android:layout_marginEnd="12dp"
-            android:hint="tytuł"
+            android:hint="@string/title"
             app:boxStrokeWidth="0dp"
             app:errorEnabled="true">
 
@@ -54,7 +54,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
             android:layout_marginEnd="12dp"
-            android:hint="kwota"
+            android:hint="@string/amount"
             app:boxStrokeWidth="0dp"
             app:errorEnabled="true">
 
@@ -76,7 +76,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
             android:layout_marginEnd="12dp"
-            android:hint="opis"
+            android:hint="@string/description"
             app:boxStrokeWidth="0dp"
             app:errorEnabled="true">
 
@@ -98,7 +98,7 @@
         android:layout_height="wrap_content"
         android:background="@color/colorAccent"
         android:padding="10dp"
-        android:text="Update transaction"
+        android:text="@string/update_transaction"
         android:layout_margin="10dp"
         android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"

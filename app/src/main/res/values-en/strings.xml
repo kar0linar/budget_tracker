@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">budget tracker</string>
+    <string name="balance_title">balance:</string>
+    <string name="budget_title">budget</string>
+    <string name="expense_title">expense</string>
+    <string name="transactions_title">Transactions:</string>
+    <string name="select_all_button">mark all</string>
+    <string name="delete_selected_button">delete all</string>
+    <string name="add_element">add new element</string>
+    <string name="title">title</string>
+    <string name="amount">amount</string>
+    <string name="description">description</string>
+    <string name="add_transaction">add transaction</string>
+    <string name="update_transaction">update transaction</string>
+    <string name="hello">Welcome in Budget Tracker app!</string>
+    <string name="transaction_deleted">transaction deleted!</string>
+    <string name="undo">undo</string>
+    <string name="incorrect_value">enter correct value</string>
+    <string name="authenticate_err">authentication error</string>
+    <string name="authentication_sucess">authentitation sucess</string>
+    <string name="bp_subtitle">login to continue</string>
+    <string name="bp_description">unlock with fingerprint</string>
+    <string name="bp_btn">cancel</string>
+    <string name="bp_notify">authentication failed</string>
+</resources>

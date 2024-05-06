@@ -11,6 +11,13 @@
     android:clickable="true"
     android:background="?selectableItemBackground">
 
+
+    <CheckBox
+        android:id="@+id/checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp" />
+
     <TextView
         android:id="@+id/label"
         android:layout_width="wrap_content"

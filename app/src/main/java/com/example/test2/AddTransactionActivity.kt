@@ -46,10 +46,10 @@ class AddTransactionActivity : AppCompatActivity() {
             val description = binding.descriptionInput.text.toString()
 
             if(label.isEmpty())
-                binding.labelLayout.error="podaj poprawną wartość"
+                binding.labelLayout.error= getString(R.string.incorrect_value)
 
             else if(amount == null)
-                binding.amountLayout.error="podaj poprawną wartość"
+                binding.amountLayout.error=getString(R.string.incorrect_value)
             else {
                 val transaction = Transaction(0, label, amount, description)
                 insert(transaction)

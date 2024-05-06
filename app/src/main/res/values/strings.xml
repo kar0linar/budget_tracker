@@ -1,3 +1,25 @@
 <resources>
     <string name="app_name">budget tracker</string>
+    <string name="balance_title">Całkowity bilans:</string>
+    <string name="budget_title">Budżet</string>
+    <string name="expense_title">Wydatki</string>
+    <string name="transactions_title">Transakcje:</string>
+    <string name="select_all_button">Zaznacz wszystko</string>
+    <string name="delete_selected_button">Usuń zaznaczone</string>
+    <string name="add_element">Dodaj nowy element</string>
+    <string name="title">tytuł</string>
+    <string name="amount">kwota</string>
+    <string name="description">opis</string>
+    <string name="add_transaction">dodaj transakcję</string>
+    <string name="update_transaction">Zaktualizuj transakcję</string>
+    <string name="hello">Witaj w aplikacji Budget Tracker!</string>
+    <string name="transaction_deleted">transakcja usunięta!</string>
+    <string name="undo">przywróć</string>
+    <string name="incorrect_value">wpisz poprawną wartość</string>
+    <string name="authenticate_err">Błąd autentykacji: %1$s</string>
+    <string name="authentication_sucess">Autentykacja powiodła sie</string>
+    <string name="bp_subtitle">logowanie do aplikacji</string>
+    <string name="bp_description">odblokuj za pomocą odcisku palca</string>
+    <string name="bp_btn">anuluj</string>
+    <string name="bp_notify">autentykacja nieudana</string>
 </resources>

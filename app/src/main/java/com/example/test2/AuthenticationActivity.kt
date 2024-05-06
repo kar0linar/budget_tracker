@@ -27,12 +27,12 @@ class AuthenticationActivity : AppCompatActivity() {
         object : BiometricPrompt.AuthenticationCallback() {
             override fun onAuthenticationError(errorCode: Int, errString: CharSequence?) {
                 super.onAuthenticationError(errorCode, errString)
-                notifyUser("Błąd autentykacji: $errString")
+                notifyUser(getString(R.string.authenticate_err, errString))
             }
 
             override fun onAuthenticationSucceeded(result: BiometricPrompt.AuthenticationResult?) {
                 super.onAuthenticationSucceeded(result)
-                notifyUser("Autentykacja powiodła sie")
+                notifyUser(getString(R.string.authentication_sucess))
                 startActivity(Intent(this@AuthenticationActivity, MainActivity::class.java))
                 finish()
             }
@@ -49,11 +49,11 @@ class AuthenticationActivity : AppCompatActivity() {
 
         val biometricPrompt = BiometricPrompt.Builder(this)
             .setTitle("Budget Tracker")
-            .setSubtitle("logowanie do aplikacji")
-            .setDescription("odblokuj za pomocą odcisku palca")
+            .setSubtitle(getString(R.string.bp_subtitle))
+            .setDescription(getString(R.string.bp_description))
             .setNegativeButton(
-                "anuluj", this.mainExecutor, DialogInterface.OnClickListener { dialog, which ->
-                    notifyUser("autentykacja nieudana")
+                getString(R.string.bp_btn), this.mainExecutor, DialogInterface.OnClickListener { dialog, which ->
+                    notifyUser(getString(R.string.bp_notify))
                     finish()
                 }).build()
 
